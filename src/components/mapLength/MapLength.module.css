@@ -1,0 +1,14 @@
+.distance {
+
+    @apply text-xl text-center flex
+}
+
+.map {
+    margin-right: 10px;
+    @apply w-6 h-6
+}
+
+.text {
+    display: block;
+    margin-top: auto;
+}

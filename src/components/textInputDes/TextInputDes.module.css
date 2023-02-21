@@ -1,0 +1,10 @@
+.wrapper {
+    height: 30%;
+    @apply mb-6
+}
+
+.limitText {
+    display: flex;
+    justify-content: flex-end;
+    @apply text-gray-700 opacity-30 text-sm
+}

@@ -1,0 +1,15 @@
+.wrapper {
+    position: relative;
+    @apply mb-5
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.icon svg {
+    height: 22px;
+    width: 22px;
+}

@@ -1,0 +1,11 @@
+.App {
+    grid-column-start: 2;
+    position: relative;
+    @apply flex flex-col place-content-between h-screen w-auto
+}
+
+
+
+.content {
+    @apply flex justify-around mt-5 h-full
+}

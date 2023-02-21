@@ -1,0 +1,37 @@
+.li {
+    border-radius: 2px;
+    @apply flex bg-slate-300 mb-4 p-2 items-center overflow-y-scroll justify-between overflow-x-auto
+}
+
+.activeLi {
+    border-radius: 2px;
+    @apply flex bg-blue-300 mb-4 p-2 items-center overflow-y-scroll justify-between overflow-x-auto
+}
+
+.title {
+    @apply text-xl flex
+}
+
+.texts {
+    overflow: scroll;
+    width: 70%;
+    height: 100%;
+    padding-right: 5px;
+}
+
+.svg svg {
+    @apply h-10 w-10 mr-2
+}
+
+.descr {
+    overflow: scroll;
+    height: 60%;
+    word-wrap: break-word;
+    @apply text-xs text-gray-700
+}
+
+@media (max-width: 700px) {
+    .svg svg {
+        @apply h-6 w-6
+    }
+}

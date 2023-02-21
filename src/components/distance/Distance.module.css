@@ -1,0 +1,17 @@
+.distance {
+    width: 95px;
+    @apply flex justify-center items-center text-2xl
+}
+
+
+
+@media (max-width: 700px) {
+    .arow {
+        display: none;
+    }
+
+    .distance {
+        width: 20px;
+        @apply text-lg
+    }
+}

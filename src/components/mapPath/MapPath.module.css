@@ -1,0 +1,11 @@
+.wrapper {
+
+    width: 50%;
+    @apply p-8
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        @apply p-0
+    }
+}

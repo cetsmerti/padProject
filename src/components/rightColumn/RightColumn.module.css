@@ -1,0 +1,29 @@
+.fullDesc {
+    max-height: 40%;
+    overflow: scroll;
+    word-wrap: break-word;
+    @apply mb-6 mt-6
+}
+
+.head {
+    @apply flex justify-between text-2xl
+}
+
+.wrapper {
+    width: 50%;
+    overflow: scroll;
+    @apply pl-4 pr-4 flex flex-col pb-8
+}
+
+.buttonArr {
+
+    display: flex;
+    justify-content: space-evenly;
+    @apply mt-6
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        @apply p-2
+    }
+}

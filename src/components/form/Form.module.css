@@ -1,0 +1,34 @@
+.form {
+    width: 50%;
+    height: 100%;
+    @apply flex flex-col p-4 border-r-2 border-gray-600 items-center justify-between text-xl
+}
+
+.button {
+
+    @apply h-14 w-36 border-black border-solid border-2 mb-5 mt-5 flex justify-center items-center
+}
+
+.button:hover {
+    background: white;
+}
+
+.button:active {
+    background: gray
+}
+
+.check svg {
+    @apply w-5 pr-2
+}
+
+
+.textSector {
+    width: 100%;
+    height: 65%;
+    @apply flex flex-col justify-between
+}
+
+.wrapper {
+    width: 80%;
+    @apply flex flex-col items-center
+}

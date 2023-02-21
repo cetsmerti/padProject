@@ -1,0 +1,11 @@
+.wrapper {
+    width: 50%;
+    border-right: 2px #e5e7eb solid;
+    @apply pl-4 pr-4
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        padding: 0;
+    }
+}

@@ -1,0 +1,17 @@
+.header {
+    @apply p-5 border-b-2 flex justify-between items-center
+}
+
+.logo {
+    @apply text-4xl
+}
+
+@media (max-width: 700px) {
+    .logo {
+        @apply text-xl
+    }
+
+    .header {
+        @apply p-2
+    }
+}
