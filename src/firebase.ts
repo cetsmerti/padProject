@@ -1,7 +1,6 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore/lite'
-const API_KEY = import.meta.env.VITE_API_KEY;
 const firebaseConfig = {
     apiKey: "AIzaSyAZFLOTciFfRhxdoVUkTmqbaInQtXMLZ28",
     authDomain: "cetsmertip.firebaseapp.com",

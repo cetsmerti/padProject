@@ -1,6 +1,6 @@
-import { DirectionsRenderer, GoogleMap, useLoadScript } from '@react-google-maps/api'
+import { DirectionsRenderer, GoogleMap, GoogleMapProps, useLoadScript } from '@react-google-maps/api'
 import { useEffect, useState } from 'react'
-import { usePathMass } from '../../state/state'
+import { PathObjList, usePathMass } from '../../state/state'
 
 export const MapRightColumn = () => {
     const { isLoaded } = useLoadScript({ googleMapsApiKey: 'AIzaSyD0Q3W5hUzcB36p5yHr8D9BFAcZstRd3f8' })
@@ -10,11 +10,12 @@ export const MapRightColumn = () => {
 }
 function Map() {
     const activeMark = usePathMass(state => state.active)
-    const [state, setState] = useState('')
+    const [state, setState] = useState()
 
 
     useEffect(() => {
-        setState(<DirectionsRenderer directions={activeMark?.directionsResponse} />)
+        // @ts-ignore
+        setState(<DirectionsRenderer directions={activeMark.directionsResponse} />)
     }, [activeMark])
 
     return (

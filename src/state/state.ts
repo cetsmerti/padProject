@@ -1,5 +1,5 @@
 import { collection, getDocs } from 'firebase/firestore/lite'
-import { useDeferredValue } from 'react'
+
 import { create } from 'zustand'
 import { db } from '../firebase'
 
@@ -15,7 +15,7 @@ interface IObjectPath {
     directionsResponse: unknown,
     markMass: markInfo[]
     dopMark: IDopMark[]
-    id?: string
+    id: string
 }
 export interface PathObjList extends IObjectPath {
     id: string
@@ -55,6 +55,7 @@ export const useNewPath = create<IUsePath>((set) => ({
     title: '',
     shortDescription: '',
     fullDescription: '',
+    id: '1',
     setTitle: (title: string) => set((state) => ({
         ...state,
         title: title
@@ -122,7 +123,7 @@ export const usePathMass = create<IUsePathMass>((set) => ({
         const data: PathObjList[] = []
         docSnap?.forEach((doc) => {
             const dat = doc.data()
-            data.push(dat)
+            data.push(dat as PathObjList)
         })
         data.sort((item, item2) => {
             if (item.favorites) {

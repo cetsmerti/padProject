@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { ReactSVG } from 'react-svg'
 import { ILiElement } from './LiElement.interface'
+// @ts-ignore
 import mapIcon from './map.svg'
 import styles from './LiElement.module.css'
 import { usePathMass, PathObjList } from '../../state/state'

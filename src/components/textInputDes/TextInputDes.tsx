@@ -7,7 +7,7 @@ export const TextInputDes = ({ }: ITextInputDes): JSX.Element => {
     const state = useNewPath(state => state)
 
 
-    const limitText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const limitText = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         if (e.target.value.length <= 160) {
             state.setShortDescription(e.target.value)
         }
@@ -17,8 +17,9 @@ export const TextInputDes = ({ }: ITextInputDes): JSX.Element => {
         <div className={styles.wrapper}>
             <div>Short description</div>
             <TextField
+                minRows='4'
                 sx={{
-                    height: '70%',
+                    height: '65%',
                     overflow: 'scroll'
                 }}
                 fullWidth

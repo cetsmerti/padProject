@@ -38,15 +38,16 @@ export const RightColumn = ({ }: IRightColumn): JSX.Element => {
         await deleteDoc(doc(db, "Mark", id));
         activeMark.updateMass()
     }
+    const activePath = activeMark.active as PathObjList
 
     return (
-        <div onClick={() => console.log(activeMark.active)} className={styles.wrapper}>
+        <div className={styles.wrapper}>
             {activeMark.active &&
                 <>
                     <div>
                         <div className={styles.head}>
                             <h2 className={styles.title} >{activeMark.active.title}</h2>
-                            <Distance>{activeMark.active.distance}</Distance>
+                            <Distance arow={false}>{activeMark.active.distance}</Distance>
                         </div>
                     </div>
                     <span className={styles.fullDesc} >
@@ -54,8 +55,8 @@ export const RightColumn = ({ }: IRightColumn): JSX.Element => {
                     </span>
                     <MapRightColumn />
                     <div className={styles.buttonArr}>
-                        <Button onClick={() => addFav(activeMark.active.id)} >Add to fovorites</Button>
-                        <Button onClick={() => deletPath(activeMark.active.id)} color='error'>remove</Button>
+                        <Button onClick={() => addFav(activePath.id)} >Add to fovorites</Button>
+                        <Button onClick={() => deletPath(activePath.id)} color='error'>remove</Button>
                     </div>
                 </>}
         </div>

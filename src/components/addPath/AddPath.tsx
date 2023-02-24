@@ -1,4 +1,4 @@
-// import { IAddPath } from './addPath.iterface'
+
 import { useModal } from './../../state/state'
 import { Form } from '../form/Form'
 import { MapPath } from '../mapPath/MapPath'

@@ -13,7 +13,8 @@ export const TextInputFullDes = ({ }: ITextInputFullDes): JSX.Element => {
                     height: '89%',
                     overflow: 'scroll'
                 }}
-                maxRows={10}
+                minRows='8'
+                maxRows='8'
                 fullWidth
                 multiline
                 className={styles.input}

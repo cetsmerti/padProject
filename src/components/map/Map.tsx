@@ -18,12 +18,15 @@ function Map() {
         lat: 49.44466787147777,
         lng: 32.044659230686115
     }
-    const mouseEm = (ev) => {
+    const mouseEm = (ev: google.maps.MapMouseEvent) => {
         const newObj = {
+            // @ts-ignore
             lat: ev.latLng.lat(),
+            // @ts-ignore
             lng: ev.latLng.lng()
         }
         const centerr = new google.maps.LatLng(newObj)
+        // @ts-ignore
         newPathMap.setMarkMass(centerr)
     }
 
@@ -48,6 +51,7 @@ function Map() {
             destination: newPathMap.markMass[newPathMap.markMass.length - 1],
             travelMode: google.maps.TravelMode.WALKING,
         }).catch((e: Error) => console.log(e.message));
+        // @ts-ignore
         newPathMap.setDistance(results.routes[0].legs[results.routes[0].legs.length - 1].distance?.text)
         newPathMap.setDirectionsResponse(results)
     }
@@ -59,9 +63,9 @@ function Map() {
         <GoogleMap zoom={15}
             center={centerMap} onClick={ev => mouseEm(ev)}
             mapContainerClassName={styles.map}  >
-            {newPathMap.directionsResponse && (
+            {newPathMap.directionsResponse &&
                 <DirectionsRenderer directions={newPathMap.directionsResponse} />
-            )}
+            }
         </GoogleMap>
 
     </div>

@@ -1,16 +1,16 @@
 
 import { Alert } from '@mui/material'
-import { initializeApp } from 'firebase/app'
-import { collection, doc, getFirestore, setDoc } from 'firebase/firestore/lite'
+import { doc, setDoc } from 'firebase/firestore/lite'
 import { nanoid } from 'nanoid'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ReactSVG } from 'react-svg'
-import { db, app } from '../../firebase'
+import { db } from '../../firebase'
 import { useModal, useNewPath, usePathMass } from '../../state/state'
 import { MapLength } from '../mapLength/MapLength'
 import { TextInputDes } from '../textInputDes/TextInputDes'
 import { TextInputTitle } from '../textInputTitle/TextInputTitle'
 import { TextInputFullDes } from '../textInputTitleFullDes/TextInputFullDes'
+// @ts-ignore
 import check from './check.svg'
 import styles from './Form.module.css'
 
